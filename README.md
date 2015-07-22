@@ -9,10 +9,11 @@ import (
 )
 
 func main() {
-    err := fias.Import()
-    if err != nil {
-        println(err)
-    }
+	_, err := fias.Import("C:\\temp\\kladr\\base\\")
+	if err != nil {
+		println(err)
+		return
+	}
+	println("Считываение *.DBF файлов успешно завершено")
 }
-
 ```
